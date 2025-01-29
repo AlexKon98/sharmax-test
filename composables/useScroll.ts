@@ -13,7 +13,7 @@ export default function useScroll() {
   onMounted(() => {
     window.addEventListener('scroll', handleScroll);
 
-    watch(isScrolled, (val) => {
+    watch(isScrolled, (val: boolean) => {
     if (val) document.querySelector('main')!.classList.add('scrolled');
     else document.querySelector('main')!.classList.remove('scrolled');
   }, { immediate: true });
